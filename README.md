@@ -1,5 +1,5 @@
 
-# JS Dev - Final Capstone - Whack-a-mole
+# JS Dev - Final Capstone
 
 If you've ever been to an arcade you have probably seen or played whack-a-mole. *Whack-a-mole* is a game in which a player uses a mallet to hit toy moles, which appear at random, back into their holes. You are tasked in writing a computer version of this game where a user clicks on a mole (or some other entity) that appears or disapears randomly. You are encouraged to come up with an original design for this game. Feel free to use the CSS skills that you've learned in this course to give your game a unique feel.
 
