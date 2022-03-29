@@ -1,9 +1,24 @@
 
 # JS Dev - Final Capstone
 
-If you've ever been to an arcade you have probably seen or played whack-a-mole. *Whack-a-mole* is a game in which a player uses a mallet to hit toy moles, which appear at random, back into their holes. You are tasked in writing a computer version of this game where a user clicks on a mole (or some other entity) that appears or disapears randomly. You are encouraged to come up with an original design for this game. Feel free to use the CSS skills that you've learned in this course to give your game a unique feel.
+A local game development studio has decided to create a new game, based on *Whack-a-mole!*. If you've ever been to an arcade you have probably seen or played *whack-a-mole*. *Whack-a-mole* is a game in which a player uses a mallet to hit toy moles, which appear at random, back into their holes. The game designers have asked you to come up with a computer version of this game and have provided the source code that needs to be completed. You are encouraged to come up with an original visual design for this game and even change the theme. The game designer expects that you use the JavaScript, HTML and CSS skills that you've learned in this course to give the game a unique feel.
 
 ![whackamole](https://github.com/gabrielsanchez/erddiagram/blob/main/whackamole.gif?raw=true)
+
+# Steps to complete
+
+To complete this project, you must do the following:
+
+- Write code that passes all the tests in the Qualified.
+- Write code that passes all of the requirements in the project rubric, and submit your GitHub link to the Thinkful team.
+
+Fork and clone this repository and submit your project when you are finished. You can use VS Code or Qualified's Web IDE to work on this project but remember that your will need to submit a Github link of your project to the Thinkful team as well.
+
+# Installation
+
+1. Fork and clone this repo.
+2. Open the terminal, navigate to the project's folder and type `npm install`
+3. To run the tests, run `npm test`
 
 # Existing Files
 
@@ -13,7 +28,6 @@ If you've ever been to an arcade you have probably seen or played whack-a-mole. 
 | `src/styles.css` |	The CSS file that holds the styling of the game. You don't need to modify this file for the tests to pass but you may want to make optional changes to the file to change the appearance.|
 | `src/index.js` | The JS file that holds the functionality of the game. You will need to change this file for the tests to pass. |
 | `test/solution.test.js` | This file holds the unit tests of the game.|
-
 
 # User Stories
 
@@ -345,18 +359,14 @@ You made it! You finished the first version of your game and now it's time to sh
 
 1. Project is deployed to Github.
 
-
 # Success Criteria
 
-Functionality:
-- The game works and covers the user stories as described above.
-- The game has at least one original feature as described in US-06.
-- All the tests pass as expected.
-
-General Code Organization:
-- Minimal code duplication
-- Comments are used to describe the functions.
-
+For your project to pass, all of the following statements must be true.
+- All tests are passing in Qualified.
+- The sprites appear/disappear randomly and the score is incremented when a player clicks on the sprite. 
+- The game includes a timer that tells the player how many seconds they have left.
+- The game is deployed to Github.
+- The game presents some aspects of originality and creativity as specified in US-06.
 
 # Tips
 
