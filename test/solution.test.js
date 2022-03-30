@@ -273,10 +273,8 @@ describe("US-04 whack()", () => {
     });
     expect(startGame).toContain("setEventListeners()");
   });
-  /*
+
   it("should increment score when clicking on mole", async () => {
-    let content = await page.content();
-    expect(content).toContain('<span id="score">0</span>');
     const points = await page.evaluate(() => {
       window.startGame();
       const mole = document.querySelectorAll(".mole")[0];
@@ -286,7 +284,6 @@ describe("US-04 whack()", () => {
     });
     expect(points).toEqual("1");
   });
-  */
 });
 
 describe("US-05: startTimer() and updateTimer()", () => {
