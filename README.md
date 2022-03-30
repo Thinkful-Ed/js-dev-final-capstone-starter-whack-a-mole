@@ -152,7 +152,7 @@ In this user story you are going to implement the game flow so that a player can
 
 #### 1. `toggleVisibility(hole)`
 
-In the [JavaScript and the DOM: Selecting elements](#) lesson you learned about the `classList` method. Take some time to review the [classList MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) before you proceed implementing this function. Previously you used `classList.add()` and `classList.remove()` to add and remove classes to HTML elements. In this case you are asked to use `classList.toggle` so that it adds or removes the `show` class. In the `styles.css` file notice how the `.show` class is used so that the mole class appears in the respective hole:
+In the *JavaScript and the DOM: Selecting elements* lesson you learned about the `classList` method. Take some time to review the [classList MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) before you proceed implementing this function. Previously you used `classList.add()` and `classList.remove()` to add and remove classes to HTML elements. In this case you are asked to use `classList.toggle` so that it adds or removes the `show` class. In the `styles.css` file notice how the `.show` class is used so that the mole class appears in the respective hole:
 
 ```
 function toggleVisibility(hole){
@@ -353,7 +353,7 @@ You can add additional features to your game like adding more user controls to c
 
 ## US-07: Deploying to Github
 
-You made it! You finished the first version of your game and now it's time to show it to the world so that your friends and potential employers can look at your work. Follow the insturctions in the [Intro to Github lesson](https://overview.thinkful.com/preview/FEWD-201/version/3/introduction-to-web-development/html-and-css-fundamentals/intro-to-github) and deploy your game so that it becomes part of your portfolio.
+You made it! You finished the first version of your game and now it's time to show it to the world so that your friends and potential employers can look at your work. Follow the insturctions in the *Intro to Github lesson* and deploy your game so that it becomes part of your portfolio.
 
 #### Acceptance criteria
 
