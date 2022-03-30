@@ -154,7 +154,7 @@ In this user story you are going to implement the game flow so that a player can
 
 In the *JavaScript and the DOM: Selecting elements* lesson you learned about the `classList` method. Take some time to review the [classList MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) before you proceed implementing this function. Previously you used `classList.add()` and `classList.remove()` to add and remove classes to HTML elements. In this case you are asked to use `classList.toggle` so that it adds or removes the `show` class. In the `styles.css` file notice how the `.show` class is used so that the mole class appears in the respective hole:
 
-```
+```js
 function toggleVisibility(hole){
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
   
