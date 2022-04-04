@@ -5,20 +5,14 @@ A local game development studio has decided to create a new game, based on *Whac
 
 ![whackamole](https://github.com/gabrielsanchez/erddiagram/blob/main/whackamole.gif?raw=true)
 
-# Steps to complete
+## Steps to complete
 
 To complete this project, you must do the following:
 
-- Write code that passes all the tests in the Qualified.
+- Write code that passes all the tests in the Qualified assessment in this checkpoint.
 - Write code that passes all of the requirements in the project rubric, and submit your GitHub link to the Thinkful team.
 
-Fork and clone this repository and submit your project when you are finished. You can use VS Code or Qualified's Web IDE to work on this project but remember that your will need to submit a Github link of your project to the Thinkful team as well.
-
-# Installation
-
-1. Fork and clone this repo.
-2. Open the terminal, navigate to the project's folder and type `npm install`
-3. To run the tests, run `npm test`
+Fork and clone the [Final Capstone Starter Code](https://github.com/Thinkful-Ed/js-dev-final-capstone-starter) and submit it to Qualified when all your tests are passing. Remember that you will also need to submit a Github link of your project to the Thinkful team.
 
 # Existing Files
 
@@ -29,9 +23,12 @@ Fork and clone this repository and submit your project when you are finished. Yo
 | `src/index.js` | The JS file that holds the functionality of the game. You will need to change this file for the tests to pass. |
 | `test/solution.test.js` | This file holds the unit tests of the game.|
 
+
 # User Stories
 
-The user stories have been created for the game. Each of the user stories is listed below, the user stories are to be implemented in the order in which they are listed. Find the *TODO* comments in the code and create the necessary functionality.  Try to implement the functionality by yourself and check the hints and REPLs that we provide if you get stuck.
+The user stories presented below are short descriptions of the features told from the perspective of the game designer. Your work should meet the functionality as described in the *acceptance criteria* of each user story.
+
+ Each of the user stories is listed below, the user stories are to be implemented in the order in which they are listed. Find the *TODO* comments in the code and create the necessary functionality.  Try to implement the functionality by yourself and check the hints and REPLs that we provide if you get stuck.
 
 ## US-01 - Basic Game Structure
 
@@ -39,7 +36,7 @@ The game needs to have the basic structure for it to function. The game will nee
 
 #### 1. Add a title to the game surrounded in `h1` tags.
 
-You need to name your game. The default is `whack-a-mole` but you can choose another name depending on the theme that you want to set for the game. Some variations could be `whack-a-virus`, `catch-a-cat`, etc. Surround your title in h1 tags. For the test to pass you need to assign title to the h1 id.
+You need to name your game. The default is `whack-a-mole` but you can choose another name depending on the theme that you want to set for the game. Some variations could be `whack-a-virus`, `catch-a-cat`, etc. Surround your title in h1 tags. Besides naming your game, you will also need to assign an `id` attribute to the `h1` tag and set the `id` attribute's value to a string of `"title"` for the test to pass. It should look something like this:
 
 ```html
 <h1 id="title"> My game!! </h1>
@@ -87,9 +84,9 @@ Use `querySelector()` to get the missing `score` and `timer` elements.
 
 **Hint:** Review the "Selecting Elements from the DOM" lesson from the "JavaScript and the DOM" module if you don't remember how to use query selectors. You can also consult the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector).
 
-#### Aceptance criteria
+#### Acceptance criteria
 
-1. The title is surrounded by h1 tags.
+1. The title is surrounded by h1 tags and has `title` set as `id`.
 2. Nine holes and moles are declared in the html file as `div`s.
 4.  A start button is defined in the html file.
 5.  The missing query selectors for the score and timer were added in the `index.js` file.
@@ -102,9 +99,9 @@ Good job! You have the HTML of your game all set up and now it's time to impleme
 
 The function takes two values as parameters that limits the range of the number to be generated. For example, calling randomInteger(0,10)  will return a random integer between 0 and 10. Calling randomInteger(10,200)  will return a random integer between 10 and 200.
 
-Study [this example](https://replit.com/@thinkful/randomInteger#index.js) and Implement the `randomInteger(min, max)` function in `index.js`. 
+Study [this example](https://replit.com/@thinkful/randomInteger#index.js) and implement the `randomInteger(min, max)` function in `index.js`. 
  
-**Note:** This function is already implemented for you. You only need to study the REPL and uncomment it.
+**Note:** This function is already implemented for you. You only need to study the REPL and use the code provided.
 
 #### 2. `setDelay(difficulty)`
 Implement the `setDelay(difficulty)` function. The moles need to appear and disappear at a certain interval of time.  The function takes a `difficulty` parameter that can have three values: `easy`, `normal` or `hard`. If difficulty is "easy" then the function returns a time delay of 1500 milliseconds (or 1.5 seconds). If the difficulty is set to "normal" it should return 1000. If difficulty is set to "hard" it should return a randomInteger between 600 and 1200.
@@ -154,7 +151,7 @@ In this user story you are going to implement the game flow so that a player can
 
 In the *JavaScript and the DOM: Selecting elements* lesson you learned about the `classList` method. Take some time to review the [classList MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) before you proceed implementing this function. Previously you used `classList.add()` and `classList.remove()` to add and remove classes to HTML elements. In this case you are asked to use `classList.toggle` so that it adds or removes the `show` class. In the `styles.css` file notice how the `.show` class is used so that the mole class appears in the respective hole:
 
-```js
+```
 function toggleVisibility(hole){
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
   
@@ -353,20 +350,26 @@ You can add additional features to your game like adding more user controls to c
 
 ## US-07: Deploying to Github
 
-You made it! You finished the first version of your game and now it's time to show it to the world so that your friends and potential employers can look at your work. Follow the insturctions in the *Intro to Github lesson* and deploy your game so that it becomes part of your portfolio.
+You made it! You finished the first version of your game and now it's time to show it to the world so that your friends and potential employers can look at your work. Follow the instructions in the *Intro to Github lesson* and deploy your game so that it becomes part of your portfolio.
 
 #### Acceptance criteria
 
 1. Project is deployed to Github.
 
+
 # Success Criteria
 
-For your project to pass, all of the following statements must be true.
+Functionality:
 - All tests are passing in Qualified.
-- The sprites appear/disappear randomly and the score is incremented when a player clicks on the sprite. 
+- The sprites appear/disappear randomly and the score is incremented when a player clicks on the sprite.
 - The game includes a timer that tells the player how many seconds they have left.
 - The game is deployed to Github.
 - The game presents some aspects of originality and creativity as specified in US-06.
+
+General Code Organization:
+- Minimal code duplication
+- Comments are used to describe the functions.
+
 
 # Tips
 
