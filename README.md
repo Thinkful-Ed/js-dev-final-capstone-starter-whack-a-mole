@@ -9,10 +9,16 @@ A local game development studio has decided to create a new game, based on *Whac
 
 To complete this project, you must do the following:
 
-- Write code that passes all the tests in the Qualified assessment in this checkpoint.
 - Write code that passes all of the requirements in the project rubric, and submit your GitHub link to the Thinkful team.
 
-Fork and clone the [Final Capstone Starter Code](https://github.com/Thinkful-Ed/js-dev-final-capstone-starter) and submit it to Qualified when all your tests are passing. Remember that you will also need to submit a Github link of your project to the Thinkful team.
+Fork and clone this repository and submit it to your project to the Thinkful team when you are finished.
+
+# Installation
+
+1. Fork and clone this repository
+2. Navigate to the project's folder
+3. Run `npm install` to install
+4. To run the unit tests run `npm test`
 
 # Existing Files
 
@@ -22,7 +28,6 @@ Fork and clone the [Final Capstone Starter Code](https://github.com/Thinkful-Ed/
 | `src/styles.css` |	The CSS file that holds the styling of the game. You don't need to modify this file for the tests to pass but you may want to make optional changes to the file to change the appearance.|
 | `src/index.js` | The JS file that holds the functionality of the game. You will need to change this file for the tests to pass. |
 | `test/solution.test.js` | This file holds the unit tests of the game.|
-
 
 # User Stories
 
@@ -360,7 +365,6 @@ You made it! You finished the first version of your game and now it's time to sh
 # Success Criteria
 
 Functionality:
-- All tests are passing in Qualified.
 - The sprites appear/disappear randomly and the score is incremented when a player clicks on the sprite.
 - The game includes a timer that tells the player how many seconds they have left.
 - The game is deployed to Github.
