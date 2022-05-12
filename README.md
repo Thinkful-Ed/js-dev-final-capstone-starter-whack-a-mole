@@ -1,5 +1,5 @@
 
-# Foundations for Web Development - Final Capstone
+# Foundations for Web Development - Whack a Mole!
 
 A local game development studio has decided to create a new game, based on *Whack-a-mole!*. If you've ever been to an arcade you have probably seen or played *whack-a-mole*. *Whack-a-mole* is a game in which a player uses a mallet to hit toy moles, which appear at random, back into their holes. The game designers have asked you to come up with a computer version of this game and have provided the source code that needs to be completed. You are encouraged to come up with an original visual design for this game and even change the theme. The game designer expects that you use the JavaScript, HTML and CSS skills that you've learned in this course to give the game a unique feel.
 
