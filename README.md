@@ -21,6 +21,8 @@ Go ahead and get started by following the installation steps below. You'll submi
 3. Run `npm install` to install.
 4. To run the unit tests, run `npm test`.
 
+**Note:** It's not required to pass all the unit tests to complete this assignment but it is recommended that you use the tests to deliver a functional game and meet the rubric requirements.
+
 # Existing files
 
 |Folder/file path	|Description|
