@@ -287,19 +287,16 @@ describe("US-04 whack()", () => {
 });
 
 describe("US-05: startTimer() and updateTimer()", () => {
-  /*
-  // test no longer works since upgrading to latest version of Puppeteer
   it("should update timer every 1000 milliseconds ", async () => {
     const startGamer = await page.evaluate(() => {
       window.startGame();
     });
-    await page.waitFor(1000);
+    await page.waitForTimeout(1000);
     const time = await page.evaluate(() => {
       return document.querySelector("#timer").innerHTML;
     });
     expect(Number(time)).toBeGreaterThan(0);
   });
-  */
 
   it("should call startTimer() in the startGame() function", async () => {
     const startGame = await page.evaluate(() => {
