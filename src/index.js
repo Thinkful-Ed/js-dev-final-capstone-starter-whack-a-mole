@@ -3,7 +3,9 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 // TODO: Add the missing query selectors:
 const score = document.querySelector('.score'); // Use querySelector() to get the score element
+//Made changes to const score, added querySelector score.
 const timerDisplay = document.querySelector('.timer'); // use querySelector() to get the timer element.
+//Made changes to const timerDisplay, added querySelector timer.
 
 let time = 0;
 let timer;
@@ -23,6 +25,7 @@ let difficulty = "hard";
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+//ADDED THE RANDOMINTEGER FUNCTION, ALREADY IMPLEMENTED FOR ME, SELECTS RANDOM TIME THE MOLES COME OUT OF THEIR HOLES DURING THE GAME.
 
 console.log("A random integer between 0 and 10");
 console.log(randomInteger(0, 10));
@@ -30,6 +33,7 @@ console.log("Another random integer between 0 and 10");
 console.log(randomInteger(0, 10));
 console.log("A random number between 600 and 1200");
 console.log(randomInteger(600, 1200));
+//ADDED RANDON INTETGERS
 
 /**
  * Sets the time delay given a difficulty parameter.
@@ -48,6 +52,12 @@ console.log(randomInteger(600, 1200));
  */
 function setDelay(difficulty) {
   // TODO: Write your code here.
+  if (difficulty === "easy") {
+    return 1500;
+  } else if (difficulty === "normal") {
+    return 1000;
+  } else if (difficulty === "hard") {
+    return 856;
   
 }
 
