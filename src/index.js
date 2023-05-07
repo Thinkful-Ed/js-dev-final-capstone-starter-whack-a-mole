@@ -79,13 +79,13 @@ function setDelay(difficulty) {
  */
 function chooseHole(holes) {
   // TODO: Write your code here.
-  let randomIndex = Math.floor(Math.random() * holes.length);
-  //CHOOSE A RANDOM INDEX FOR THE HOLE ARRAY
-  if (randomIndex === lastHole) {
-randomIndex = (randomIndex + 1) % holes.length;
+  const index = randomInteger(0,2);
+  const hole = holes[index];
+  if (hole === lastHole) {
+    return chooseHole(holes);
   }
-  lastHole = randomIndex;
-  return holes[randomIndex];
+  lastHole = hole;
+  return hole; 
 }
 
 /**
