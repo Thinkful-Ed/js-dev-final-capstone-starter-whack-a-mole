@@ -54,11 +54,13 @@ function setDelay(difficulty) {
   // TODO: Write your code here.
   if (difficulty === "easy") {
     return 1500;
+    // SETTING DIFFICULTY FOR EASY
   } else if (difficulty === "normal") {
     return 1000;
+    // SETTING DIFFICULTY FOR NORMAL
   } else if (difficulty === "hard") {
     return 856;
-  
+  //SETTING DIFFICULTY FOR HARD
 }
 
 /**
@@ -77,7 +79,13 @@ function setDelay(difficulty) {
  */
 function chooseHole(holes) {
   // TODO: Write your code here.
-
+  let randomIndex = Math.floor(Math.random() * holes.length);
+  //CHOOSE A RANDOM INDEX FOR THE HOLE ARRAY
+  if (randomIndex === lastHole) {
+randomIndex = (randomIndex + 1) % holes.length;
+  }
+  lastHole = randomIndex;
+  return holes[randomIndex];
 }
 
 /**
