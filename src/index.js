@@ -2,7 +2,7 @@ const holes = document.querySelectorAll('.hole');
 const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 // TODO: Add the missing query selectors:
-const score : document.querySelector('.score'); // Use querySelector() to get the score element
+const score = document.querySelector('.score'); // Use querySelector() to get the score element
 //Made changes to const score, added querySelector score.
 const timerDisplay = document.querySelector('.timer'); // use querySelector() to get the timer element.
 //Made changes to const timerDisplay, added querySelector timer.
