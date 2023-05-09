@@ -55,10 +55,10 @@ function setDelay(difficulty) {
   if (difficulty === "easy") {
     return 1500;
     // SETTING DIFFICULTY FOR EASY
-  }; else if (difficulty === "normal") {
+  }; if (difficulty === "normal") {
     return 1000;
     // SETTING DIFFICULTY FOR NORMAL
-  }; else if (difficulty === "hard") {
+  }; if (difficulty === "hard") {
     return randomInteger(600, 1200);
   //SETTING DIFFICULTY FOR HARD
   };
@@ -130,7 +130,7 @@ function gameOver() {
 *
 */
 function showUp() {
-  let delay = setDelay("normal"); // TODO: Update so that it uses setDelay()
+  let delay = setDelay(difficulty); // TODO: Update so that it uses setDelay()
   const hole = chooseHole(holes);  // TODO: Update so that it use chooseHole()
   return showAndHide(hole, delay);
 }
@@ -233,9 +233,8 @@ function startTimer() {
 *
 */
 function whack(event) {
-  // TODO: Write your code here.
-  console.log("whack!")
-  updateScore()
+  // TODO: Write your code here
+  updateScore();
   return points;
 }
 
