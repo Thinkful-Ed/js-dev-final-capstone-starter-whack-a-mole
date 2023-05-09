@@ -2,16 +2,16 @@ const holes = document.querySelectorAll('.hole');
 const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 // TODO: Add the missing query selectors:
-const score = document.querySelector('.score'); // Use querySelector() to get the score element
+const score = document.querySelector('#score'); // Use querySelector() to get the score element
 //Made changes to const score, added querySelector score.
-const timerDisplay = document.querySelector('.timer'); // use querySelector() to get the timer element.
+const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 //Made changes to const timerDisplay, added querySelector timer.
 
-let time = 0;
+let time = 30;
 let timer;
 let lastHole = 0;
 let points = 0;
-let difficulty = "hard";
+let difficulty = "normal";
 
 /**
  * Generates a random integer within a range.
@@ -55,12 +55,13 @@ function setDelay(difficulty) {
   if (difficulty === "easy") {
     return 1500;
     // SETTING DIFFICULTY FOR EASY
-  } else if (difficulty === "normal") {
+  }; else if (difficulty === "normal") {
     return 1000;
     // SETTING DIFFICULTY FOR NORMAL
-  } else if (difficulty === "hard") {
-    return 856;
+  }; else if (difficulty === "hard") {
+    return randomInteger(600, 1200);
   //SETTING DIFFICULTY FOR HARD
+  };
 }
 
 /**
@@ -79,7 +80,7 @@ function setDelay(difficulty) {
  */
 function chooseHole(holes) {
   // TODO: Write your code here.
-  const index = randomInteger(0,2);
+  const index = randomInteger(0,8);
   const hole = holes[index];
   if (hole === lastHole) {
     return chooseHole(holes);
@@ -178,6 +179,7 @@ function toggleVisibility(hole){
 function updateScore() {
   // TODO: Write your code here
   points++;
+  score.textContent = points;
   return points;
 }
 
