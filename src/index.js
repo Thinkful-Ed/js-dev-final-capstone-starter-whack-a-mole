@@ -240,7 +240,7 @@ function whack(event) {
     score.textContent = points;
     if (points === moles.length && moles.length > 0) {
       mole.style.background = "red";
-    });
+    };
   } time = 0;
   score.textContent = points;
   return time;
