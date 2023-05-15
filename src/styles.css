@@ -30,6 +30,10 @@ h2 {
     font-size: 40px;
 }
 
+.button {
+  align-items: center;
+}
+
 #timer{
     color: red;
 }
@@ -79,8 +83,4 @@ h2 {
 .hole.show .mole {
   top: 0;
   /*transform: scale(1.1);*/
-}
-
-.button {
-  align-items: center;
 }
