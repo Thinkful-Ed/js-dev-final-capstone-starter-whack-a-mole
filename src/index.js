@@ -283,7 +283,7 @@ function startGame(){
   showUp();
   points = 0;
   clearScore();
-  setDuration(10);
+  setDuration(30);
   startTimer();
   setEventListeners();
   
