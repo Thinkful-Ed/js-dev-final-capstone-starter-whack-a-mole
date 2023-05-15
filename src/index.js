@@ -84,9 +84,8 @@ function chooseHole(holes) {
   const hole = holes[index];
   if (hole === lastHole) {
     return chooseHole(holes);
-  }else{
-    lastHole = hole;
   }
+    lastHole = hole;
   return hole; 
 }
 
@@ -163,7 +162,7 @@ function showAndHide(hole, delay){
 */
 function toggleVisibility(hole){
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
-  hole.classList.toggle("show");
+  hole.classList.toggle('show');
   return hole;
 }
 
@@ -235,16 +234,6 @@ function startTimer() {
 */
 function whack(event) {
   // TODO: Write your code here
-  if (time > 0) {
-    points += 1;
-    score.textContent = points;
-    if (points === moles.length && moles.length > 0) {
-      mole.style.background = "red";
-    };
-  } time = 0;
-  score.textContent = points;
-  return time;
-}
   updateScore();
   return points;
 }
@@ -256,9 +245,8 @@ function whack(event) {
 */
 function setEventListeners(){
   // TODO: Write your code here
-  for (var i = 0; i < moles.lenght; i++) {
-    moles[i].addEventListener('click', whack);
-  }
+  moles.forEach(
+    mole => mole.addEventListener('click', whack));
   return moles;
 }
 
@@ -292,10 +280,13 @@ function stopGame(){
 *
 */
 function startGame(){
-  setDuration(10);
   showUp();
+  points = 0;
+  clearScore();
+  setDuration(10);
   startTimer();
   setEventListeners();
+  
   return "game started";
 }
 
