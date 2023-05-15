@@ -259,6 +259,7 @@ function setEventListeners(){
   for (var i = 0; i < moles.lenght; i++) {
     moles[i].addEventListener('click', whack);
   }
+  return moles;
 }
 
 /**
