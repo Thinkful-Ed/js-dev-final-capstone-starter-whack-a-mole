@@ -34,6 +34,10 @@ h2 {
   align-items: center;
 }
 
+#score {
+  color: green;
+}
+
 #timer{
     color: red;
 }
