@@ -7,7 +7,7 @@ const score = document.querySelector('#score'); // Use querySelector() to get th
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 //Made changes to const timerDisplay, added querySelector timer.
 
-let time = 30;
+let time = 0;
 let timer;
 let lastHole = 0;
 let points = 0;
@@ -55,13 +55,13 @@ function setDelay(difficulty) {
   if (difficulty === "easy") {
     return 1500;
     // SETTING DIFFICULTY FOR EASY
-  }; if (difficulty === "normal") {
+  } if (difficulty === "normal") {
     return 1000;
     // SETTING DIFFICULTY FOR NORMAL
-  }; if (difficulty === "hard") {
+  } if (difficulty === "hard") {
     return randomInteger(600, 1200);
   //SETTING DIFFICULTY FOR HARD
-  };
+  }
 }
 
 /**
@@ -84,8 +84,9 @@ function chooseHole(holes) {
   const hole = holes[index];
   if (hole === lastHole) {
     return chooseHole(holes);
+  }else{
+    lastHole = hole;
   }
-  lastHole = hole;
   return hole; 
 }
 
@@ -148,7 +149,7 @@ function showAndHide(hole, delay){
   toggleVisibility(hole);
   const timeoutID = setTimeout(() => {
     // TODO: call the toggleVisibility function so that it removes the 'show' class when the timer times out.
-    toggleVisibility(hole)
+    toggleVisibility(hole);
     gameOver();
   }, 1000); // TODO: change the setTimeout delay to the one provided as a parameter
   return timeoutID;
@@ -162,7 +163,7 @@ function showAndHide(hole, delay){
 */
 function toggleVisibility(hole){
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
-  hole.classList.toggle('show');
+  hole.classList.toggle("show");
   return hole;
 }
 
@@ -220,7 +221,7 @@ function updateTimer() {
 */
 function startTimer() {
   // TODO: Write your code here
-  timer = setInterval(updateTimer, 1000);
+  setInterval(updateTimer, 1000);
   return timer;
 }
 
@@ -234,6 +235,16 @@ function startTimer() {
 */
 function whack(event) {
   // TODO: Write your code here
+  if (time > 0) {
+    points += 1;
+    score.textContent = points;
+    if (points === moles.length && moles.length > 0) {
+      mole.style.background = "red";
+    });
+  } time = 0;
+  score.textContent = points;
+  return time;
+}
   updateScore();
   return points;
 }
@@ -245,10 +256,9 @@ function whack(event) {
 */
 function setEventListeners(){
   // TODO: Write your code here
-  moles.forEach(
-    mole => mole.addEventListener('click', whack)
-    );
-  return moles;
+  for (var i = 0; i < moles.lenght; i++) {
+    moles[i].addEventListener('click', whack);
+  }
 }
 
 /**
@@ -283,6 +293,8 @@ function stopGame(){
 function startGame(){
   setDuration(10);
   showUp();
+  startTimer();
+  setEventListeners();
   return "game started";
 }
 
