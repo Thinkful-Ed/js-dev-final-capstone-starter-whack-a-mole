@@ -89,7 +89,3 @@ h2 {
   top: 0;
   /*transform: scale(1.1);*/
 }
-
-@media <media type> (<media features>) {
-  <CSS Rules>
-}
