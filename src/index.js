@@ -5,11 +5,11 @@ const startButton = document.querySelector('#start');
 const score = document.querySelector('#score'); // Use querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 
-let time = 0;
+let time = 30;
 let timer;
 let lastHole = 0;
 let points = 0;
-let difficulty = "hard";
+let difficulty = "normal";
 
 /**
  * Generates a random integer within a range.
@@ -23,7 +23,12 @@ let difficulty = "hard";
 function randomInteger(min, max) {
    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
+console.log("A random integer between 0 and 10");
+console.log(randomInteger(0, 10));
+console.log("Another random integer between 0 and 10");
+console.log(randomInteger(0, 10));
+console.log("A random number between 600 and 1200");
+console.log(randomInteger(600, 1200));
 /**
  * Sets the time delay given a difficulty parameter.
  *
@@ -40,8 +45,13 @@ function randomInteger(min, max) {
  *
  */
 function setDelay(difficulty) {
-  // TODO: Write your code here.
-  
+	if (difficulty === "easy") {
+		return 1500;
+	} else if (difficulty === "normal") {
+		return 1000;
+	} else {
+		return randomInteger(600, 1200);
+	}
 }
 
 /**
@@ -59,8 +69,13 @@ function setDelay(difficulty) {
  * chooseHole(holes) //> returns one of the 9 holes that you defined
  */
 function chooseHole(holes) {
-  // TODO: Write your code here.
-
+	const index = randomInteger(0, 8);
+	const hole = holes[index];
+	if (hole === lastHole) {
+		return chooseHole(holes);
+	}
+	lastHole = hole;
+	return hole;
 }
 
 /**
@@ -84,8 +99,13 @@ function chooseHole(holes) {
 *
 */
 function gameOver() {
-  // TODO: Write your code here
-  
+	if (time > 0) {
+		timeoutId = showUp();
+		return timeoutId;
+	} else {
+		gameStopped = stopGame();
+		return gameStopped;
+	}
 }
 
 /**
@@ -98,8 +118,8 @@ function gameOver() {
 *
 */
 function showUp() {
-  let delay = 0; // TODO: Update so that it uses setDelay()
-  const hole = 0;  // TODO: Update so that it use chooseHole()
+  let delay = setDelay(difficulty); // TODO: Update so that it uses setDelay()
+  const hole = chooseHole(holes);  // TODO: Update so that it use chooseHole()
   return showAndHide(hole, delay);
 }
 
@@ -130,7 +150,7 @@ function showAndHide(hole, delay){
 */
 function toggleVisibility(hole){
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
-  
+  hole.classList.toggle('show');
   return hole;
 }
 
@@ -184,7 +204,7 @@ function updateTimer() {
 */
 function startTimer() {
   // TODO: Write your code here
-  // timer = setInterval(updateTimer, 1000);
+  timer = setInterval(updateTimer, 1000);
   return timer;
 }
 
@@ -243,8 +263,8 @@ function stopGame(){
 *
 */
 function startGame(){
-  //setDuration(10);
-  //showUp();
+  setDuration(10);
+  showUp();
   return "game started";
 }
 
