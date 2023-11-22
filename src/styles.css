@@ -65,7 +65,7 @@ h2 {
 
 .mole {
   /*background:url('./assets/mole.png') bottom center no-repeat;*/
-  background:url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat;
+  background:url("https://github.com/isaimoran/js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/mouse_rat.png?raw=true") bottom center no-repeat;
   background-size: 40%;
   position: absolute;
   top: 100%;
