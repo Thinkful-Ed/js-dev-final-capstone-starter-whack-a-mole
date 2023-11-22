@@ -5,7 +5,7 @@ const startButton = document.querySelector('#start');
 const score = document.querySelector('#score'); // Use querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 
-let time = 30;
+let time = 10;
 let timer;
 let lastHole = 0;
 let points = 0;
@@ -23,12 +23,7 @@ let difficulty = "normal";
 function randomInteger(min, max) {
    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-console.log("A random integer between 0 and 10");
-console.log(randomInteger(0, 10));
-console.log("Another random integer between 0 and 10");
-console.log(randomInteger(0, 10));
-console.log("A random number between 600 and 1200");
-console.log(randomInteger(600, 1200));
+
 /**
  * Sets the time delay given a difficulty parameter.
  *
@@ -133,12 +128,12 @@ function showUp() {
 */
 function showAndHide(hole, delay){
   // TODO: call the toggleVisibility function so that it adds the 'show' class.
-  
+  toggleVisibility(hole);
   const timeoutID = setTimeout(() => {
     // TODO: call the toggleVisibility function so that it removes the 'show' class when the timer times out.
-    
+    toggleVisibility(hole);
     gameOver();
-  }, 0); // TODO: change the setTimeout delay to the one provided as a parameter
+  }, delay); // TODO: change the setTimeout delay to the one provided as a parameter
   return timeoutID;
 }
 
@@ -166,7 +161,8 @@ function toggleVisibility(hole){
 */
 function updateScore() {
   // TODO: Write your code here
-
+points ++;
+score.textContent = points;
   return points;
 }
 
@@ -179,8 +175,8 @@ function updateScore() {
 */
 function clearScore() {
   // TODO: Write your code here
-  // points = 0;
-  // score.textContent = points;
+  points = 0;
+  score.textContent = points;
   return points;
 }
 
@@ -192,7 +188,10 @@ function clearScore() {
 function updateTimer() {
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
-  
+  if (time > 0){
+    time -= 1;
+    timerDisplay.textContent = time;
+  }
   return time;
 }
 
@@ -219,6 +218,7 @@ function startTimer() {
 function whack(event) {
   // TODO: Write your code here.
   // call updateScore()
+  updateScore();
   return points;
 }
 
@@ -229,10 +229,12 @@ function whack(event) {
 */
 function setEventListeners(){
   // TODO: Write your code here
-
+moles.forEach(
+  mole => mole.addEventListener('click', whack)
+  );
   return moles;
 }
-
+setEventListeners();
 /**
 *
 * This function sets the duration of the game. The time limit, in seconds,
@@ -253,6 +255,7 @@ function setDuration(duration) {
 function stopGame(){
   // stopAudio(song);  //optional
   clearInterval(timer);
+  time = 10;
   return "game stopped";
 }
 
@@ -265,6 +268,9 @@ function stopGame(){
 function startGame(){
   setDuration(10);
   showUp();
+  clearScore();
+	setEventListeners();
+	startTimer();
   return "game started";
 }
 
