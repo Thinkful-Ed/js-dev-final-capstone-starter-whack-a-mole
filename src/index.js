@@ -4,7 +4,7 @@ const startButton = document.querySelector('#start');
 const score = document.querySelector('.score'); 
 const timerDisplay = document.querySelector('.timer'); 
 
-let time = 0;
+let time = 10;
 let timer;
 let lastHole = 0;
 let points = 0;
@@ -201,9 +201,10 @@ function clearScore() {
 *
 */
 function updateTimer() {
-  if (time > 0);
+  if (time > 0) {
   time -= 1;
   timerDisplay.textContent = time;
+  }
   return time;
 }
 
