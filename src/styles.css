@@ -27,6 +27,8 @@ h2 {
 
 #start {
     text-align: center;
+    display: block;
+    margin: 0 auto;
     font-size: 30px;
 }
 
