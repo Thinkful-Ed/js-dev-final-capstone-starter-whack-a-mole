@@ -10,8 +10,8 @@ let lastHole = 0;
 let points = 0;
 let difficulty = "hard";
 
-const audioHit = new Audio("https://freesound.org/people/josefpres/sounds/657562/");
-const song = new Audio("https://freesound.org/people/josefpres/sounds/657562/");
+const audioHit = new Audio("https://drive.google.com/file/d/1yFIOCw2wCH_dodOZ8cfZinnSjiAv7ApF/view?usp=sharing");
+const song = new Audio("https://drive.google.com/file/d/1yFIOCw2wCH_dodOZ8cfZinnSjiAv7ApF/view?usp=sharing");
 
 function playAudio(audioObject) {
   audioObject.play();
@@ -84,7 +84,7 @@ function setDelay(difficulty) {
 function chooseHole(holes) {
   const index = randomInteger(0, holes.length - 1);
   const hole = holes[index];
-  if hole === lastHole {
+  if (hole === lastHole) {
     return chooseHole(holes)
   } 
   lastHole = hole {
@@ -113,7 +113,7 @@ function chooseHole(holes) {
 *
 */
 function gameOver() {
-  if time > 0 {
+  if (time > 0) {
     let timeoutId = showUp();
     return timeoutId;
   } else {
@@ -201,7 +201,7 @@ function clearScore() {
 *
 */
 function updateTimer() {
-  if time > 0;
+  if (time > 0);
   time -= 1;
   timerDisplay.textContent = time;
   return time;
@@ -237,9 +237,9 @@ function whack(event) {
 * for an example on how to set event listeners using a for loop.
 */
 function setEventListeners(){
-  mole.forEach(mole => {
-    mole.addEventListener('click', whack));
-})
+  moles.forEach(mole => {
+    mole.addEventListener('click', whack)
+});
   return moles;
 }
 
