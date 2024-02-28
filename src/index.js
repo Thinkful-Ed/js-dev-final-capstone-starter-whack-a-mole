@@ -87,9 +87,8 @@ function chooseHole(holes) {
   if (hole === lastHole) {
     return chooseHole(holes)
   } 
-  lastHole = hole {
-    return hole;
-  }
+  lastHole = hole;    
+  return hole;
 }
 
 /**
