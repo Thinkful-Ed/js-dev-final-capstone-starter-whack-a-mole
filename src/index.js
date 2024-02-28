@@ -10,6 +10,25 @@ let lastHole = 0;
 let points = 0;
 let difficulty = "hard";
 
+const audioHit = new Audio("https://freesound.org/people/josefpres/sounds/657562/");
+const song = new Audio("https://freesound.org/people/josefpres/sounds/657562/");
+
+function playAudio(audioObject) {
+  audioObject.play();
+}
+
+function loopAudio(audioObject) {
+  audioObject.loop = true;
+  playAudio(audioObject);
+}
+
+function stopAudio(audioObject) {
+  audioObject.pause();
+}
+
+function play(){
+  playAudio(song);
+}
 /**
  * Generates a random integer within a range.
  *
