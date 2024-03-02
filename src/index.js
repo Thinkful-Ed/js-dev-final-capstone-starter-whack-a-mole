@@ -63,7 +63,7 @@ function setDelay(difficulty) {
   } else if (difficulty === "normal") {
     return 1000;
   } else if (difficulty === "hard") {
-    return randomInterger(600, 1200);
+    return randomInteger(600, 1200);
   }
 }
 
@@ -118,8 +118,7 @@ function gameOver() {
   } else {
     let gameStopped = stopGame();
     return gameStopped;
-  
-  
+  }
 }
 
 /**
@@ -273,7 +272,6 @@ function stopGame(){
 *
 */
 function startGame(){
-  console.log("start");
   setDuration(10);
   showUp();
   return "game started";
