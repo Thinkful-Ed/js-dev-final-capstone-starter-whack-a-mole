@@ -1,4 +1,5 @@
 html {
+    background: url('./assets/background.png') no-repeat center center fixed;
     background: url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/background.png?raw=true') no-repeat center center fixed;
     box-sizing: border-box;
     -webkit-background-size: cover;
@@ -41,7 +42,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    cursor: url('https://github.com/jolvu/JolieV-js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/mallet.png?raw=true'), pointer;
+    cursor: url('./assets/mallet.png'), pointer;
+    cursor: url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mallet.png?raw=true'), pointer;
   }
   
   .hole {
@@ -50,8 +52,19 @@ html {
     position: relative;
   }
   
+  #mallet {
+    background: url("./assets/mallet.png") no-repeat center center;
+    background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mallet.png?raw=true") no-repeat center center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; 
+  }
+  
   .hole:after {
     display: block;
+    background: url("./assets/hole.png") bottom center no-repeat;
     background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hole.png?raw=true") bottom center no-repeat;
     background-size:contain;
     content:'';
@@ -64,6 +77,7 @@ html {
   }
   
   .mole {
+    background:url('./assets/mole.png') bottom center no-repeat;
     background:url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat;
     background-size: 40%;
     position: absolute;
