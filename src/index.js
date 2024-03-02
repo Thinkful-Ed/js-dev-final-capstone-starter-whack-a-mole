@@ -3,6 +3,11 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 const score = document.querySelector('.score'); 
 const timerDisplay = document.querySelector('.timer'); 
+const hitButton = document.getElementById('hitButton');
+
+hitButton.addEventListener('click', () => {
+  document.getElementById('hitSound').play();
+});
 
 let time = 10;
 let timer;
