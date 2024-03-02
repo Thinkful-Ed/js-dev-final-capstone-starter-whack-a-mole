@@ -51,6 +51,16 @@ h2 {
   position: relative;
 }
 
+#mallet {
+  background: url("./assets/mallet.png") no-repeat center center;
+  background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mallet.png?raw=true") no-repeat center center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none; 
+}
+
 .hole:after {
   display: block;
   background: url("./assets/hole.png") bottom center no-repeat;
