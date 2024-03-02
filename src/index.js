@@ -9,7 +9,7 @@ hitButton.addEventListener('click', () => {
   document.getElementById('hitSound').play();
 });
 
-let time = 10;
+let time = 0;
 let timer;
 let lastHole = 0;
 let points = 0;
