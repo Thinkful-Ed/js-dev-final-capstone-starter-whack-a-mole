@@ -46,12 +46,6 @@ html {
     cursor: url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mallet.png?raw=true'), pointer;
   }
 
- #mallet {
-  width: 50px;
-  height: 100px;
-  background: url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mallet.png?raw=true') no-repeat;
- }
-
   .hole {
     flex: 1 0 33.33%;
     overflow: hidden;
