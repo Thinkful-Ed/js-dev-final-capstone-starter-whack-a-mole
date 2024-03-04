@@ -145,7 +145,7 @@ function stopGame(){
 function startGame(){
   console.log("startGame function called");
   setDuration(10);
-  updateTimer();
+  startTimer();
   showUp();
   return "game started";
 }
