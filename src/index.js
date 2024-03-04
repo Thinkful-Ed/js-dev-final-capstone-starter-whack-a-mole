@@ -43,6 +43,16 @@ function chooseHole(holes) {
   return hole;
 }
 
+function gameOver() {
+  if (time > 0) {
+    let timeoutId = showUp();
+    return timeoutId;
+  } else {
+    let gameStopped = stopGame();
+    return gameStopped;
+  }
+}
+
 /**
  * Calls the showAndHide() function with a specific delay and a hole.
  */
