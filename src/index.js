@@ -5,15 +5,15 @@ const score = document.querySelector('.score');
 const timerDisplay = document.querySelector('.timer'); 
 const hitButton = document.getElementById('hitButton');
 
-hitButton.addEventListener('click', () => {
-  document.getElementById('hitSound').play();
-});
-
 let time = 0;
 let timer;
 let lastHole = 0;
 let points = 0;
 let difficulty = "hard";
+
+hitButton.addEventListener('click', () => {
+  document.getElementById('hitSound').play();
+});
 
 /**
  * Generates a random integer within a range.
