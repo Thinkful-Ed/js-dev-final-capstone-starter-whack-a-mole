@@ -189,6 +189,8 @@ startButton.addEventListener("click", function() {
   playBackgroundSound(); // Play the background sound
 });
 
+setEventListeners();
+
 // Please do not modify the code below.
 // Used for testing purposes.
 window.randomInteger = randomInteger;
