@@ -53,6 +53,7 @@ function gameOver() {
   }
 }
 
+
 /**
  * Calls the showAndHide() function with a specific delay and a hole.
  */
