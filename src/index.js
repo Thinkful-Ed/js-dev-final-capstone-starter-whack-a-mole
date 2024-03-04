@@ -3,6 +3,7 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 const score = document.querySelector('#score'); 
 const timerDisplay = document.querySelector('#timer'); 
+const backgroundSound = document.querySelector('#backgroundSound');
 
 let time = 0;
 let timer;
@@ -81,6 +82,7 @@ function showAndHide(hole, delay){
  */
 function toggleVisibility(hole){
   hole.classList.toggle('show');
+  return hole;
 }
 
 /**
@@ -89,6 +91,7 @@ function toggleVisibility(hole){
 function updateScore() {
   points++;
   score.textContent = points;
+  return points;
 }
 
 /**
@@ -97,6 +100,7 @@ function updateScore() {
 function clearScore() {
   points = 0;
   score.textContent = points;
+  return points;
 }
 
 /**
@@ -107,6 +111,7 @@ function updateTimer() {
     time -= 1;
     timerDisplay.textContent = time;
   }
+  return time;
 }
 
 /**
@@ -114,7 +119,14 @@ function updateTimer() {
  */
 function startTimer() {
   timer = setInterval(updateTimer, 1000);
+  return timer;
 }
+
+
+// Function to pause the background sound
+function pauseBackgroundSound() {
+  backgroundSound.pause();
+};
 
 /**
  * This function is called when the game is stopped. It clears the
@@ -122,6 +134,8 @@ function startTimer() {
  */
 function stopGame(){
   clearInterval(timer);
+  pauseBackgroundSound();
+  return "game stopped";
 }
 
 /**
@@ -132,6 +146,7 @@ function startGame(){
   console.log("startGame function called");
   setDuration(10);
   showUp();
+  return "game started";
 }
 
 /**
@@ -141,6 +156,7 @@ function whack(mole) {
   updateScore();
   document.getElementById('hitSound').play();
   mole.classList.remove('show'); // Hide the mole after whacking
+  return points;
 }
 
 /**
@@ -150,6 +166,7 @@ function setEventListeners(){
   moles.forEach(mole => {
     mole.addEventListener('click', () => whack(mole));
   });
+  return moles;
 }
 
 /**
@@ -157,9 +174,21 @@ function setEventListeners(){
  */
 function setDuration(duration) {
   time = duration;
+  return time;
 }
 
-startButton.addEventListener("click", startGame);
+// Function to play the background sound
+function playBackgroundSound() {
+  backgroundSound.play();
+}
+
+// Event listener for the start button
+startButton.addEventListener("click", function() {
+  startGame(); // Call the startGame function
+  playBackgroundSound(); // Play the background sound
+});
+
+// Call setEventListeners function
 setEventListeners();
 
 
