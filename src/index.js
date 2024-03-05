@@ -145,7 +145,8 @@ function stopGame(){
 function startGame(){
   console.log("startGame function called");
   setDuration(10);
-  startTimer();
+  clearScore(); // Clear the score
+  startTimer(); // Start the timer
   showUp();
   return "game started";
 }
