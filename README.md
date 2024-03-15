@@ -1,4 +1,4 @@
-# Web Development Certificate Capstone: Whack-a-Mole!
+# Whack-a-Mole!
 
 A local game development studio has decided to create a new game that's based on Whack-A-Mole. If you've ever been to an arcade, you have probably seen or played Whack-A-Mole. It's a game in which a player uses a mallet to hit toy moles, which appear at random, back into their holes.
 
@@ -32,11 +32,47 @@ Go ahead and get started by following the installation steps below. You'll submi
 | `src/index.js` | The JS file that holds the functionality of the game. You will need to change this file for the tests to pass. |
 | `test/solution.test.js` | This file holds the unit tests of the game.|
 
-# User stories
+### Reminder: Secure your progress with regular commits
 
-The user stories presented below are short descriptions of the features told from the perspective of the game designer. Your work should meet the functionality as described in the *acceptance criteria* of each user story.
+As you work on this project, let's not forget the golden rule of coding: **commit early, commit often**. Each commit acts as a snapshot of your progress, safeguarding your work against unexpected issues and showcasing your methodical approach to problem-solving.
 
-Each of the user stories is listed below. The user stories are to be implemented in the order in which they are listed. Find the *TODO* comments in the code and create the necessary functionality. Try to implement the functionality by yourself, and check the hints and REPLs provided if you get stuck.
+- **Feature complete?** Commit it.
+- **Made noticeable progress?** Commit it.
+- **Project stretching over days or weeks?** That's even more reason to commit regularly.
+
+By committing after completing features or making significant progress, you ensure that your GitHub timeline reflects the depth and breadth of your work. This habit is invaluable, not just for keeping your work secure, but also for demonstrating your dedication and reliability to future employers. It's a practice that sets you apart in the tech world.
+
+So, as you embark on this project, take a moment to review your commit history. Is it a true reflection of your effort and progress? If not, now's the time to update it. Your future self, tackling complex projects and your future employer, assessing your potential, will thank you for this discipline. You're welcome to commit as often as you like.
+
+If you're unsure about uploading your work, revisit the *Pushing and Pulling* lesson in the *Git & GitHub* module.
+
+### No AI Assistance
+
+For your final capstone project, it's crucial that you work independently and refrain from using AI tools like SkillMate or ChatGPT. This approach is vital for a number of reasons: it nurtures essential critical thinking and problem-solving skills, which are crucial for grasping complex concepts; it prepares you for live coding challenges in technical interviews; it equips you to handle unique professional scenarios where AI tools may not be available; and it guarantees that the assessments genuinely represent your skill level.
+
+While AI tools are beneficial for practice, they should not substitute your effort in assessments. We trust in your commitment to honesty and self-improvement and wish you the best in your learning journey.
+
+# User Stories
+
+User stories aren't just tasks; they're your training ground for real-world software engineering. As you work through them:
+
+1. **Interpreting requirements**: You'll learn to translate user needs into technical features, a key skill in software development.
+  
+2. **Prioritization**: Tackling stories in order simulates real project timelines and teaches you to build features systematically.
+
+3. **Problem-solving**: Trying to solve challenges independently before seeking help mirrors the self-sufficiency expected in professional roles.
+
+4. **Meeting standards**: Adhering to acceptance criteria parallels quality assurance practices, ensuring your work meets user expectations.
+
+5. **Effective communication**: Documenting your progress and marking TODOs in code improves clarity and teamwork, crucial in collaborative environments.
+
+6. **Adaptability**: Facing and overcoming obstacles enhances your adaptability and promotes continuous learning, essential in the ever-evolving tech landscape.
+
+Each story you complete is a step towards job readiness, embodying the skills and mindset sought after by employers in the tech industry.
+
+Your work should meet the functionality as described in the *acceptance criteria* of each user story. Find the *TODO* comments in the code and create the necessary functionality. Try to implement the functionality by yourself and check the hints and REPLs are provided for you if you get stuck.
+
+Good luck - you can do this!
 
 ## US-01 - Basic game structure
 
@@ -92,6 +128,8 @@ Use `querySelector()` to get the missing `score` and `timer` elements.
 
 **Hint:** Review the _Selecting elements on the DOM_ lesson from the _JavaScript and the DOM_ module if you don't remember how to use query selectors. You can also consult the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector).
 
+**Commit your code**: If you've made notable progress, now might be a good time to make a commit to secure your progress.
+
 #### Acceptance criteria
 
 1. The title is surrounded by `h1` tags and has `title` set as `id`.
@@ -141,6 +179,8 @@ setDelay("hard") //> Returns 856 (returns a random number between 600 and 1200).
  ```
 
 **Hint:**  If you get stuck, study [this REPL](https://replit.com/@thinkful/chooseHole#script.js).
+
+**Commit your code**: If you've made notable progress, now might be a good time to make a commit to secure your progress.
 
 #### Acceptance criteria
 
@@ -202,6 +242,8 @@ function showUp() {
 
 **Hint:** Study [this REPL](https://replit.com/@thinkful/showAndHide#script.js) if you get stuck. The REPL has a very similar example that implements the mechanism that you want to implement here.
 
+**Commit your code**: If you've made notable progress, now might be a good time to make a commit to secure your progress.
+
 #### 4. `gameOver()`
 
 The purpose of this function is simply to determine if the game should continue or stop. The game continues if there is still time (`if(time > 0)`). If there is still time, then `showUp()` needs to be called again so that it sets a different delay and a different hole. If there is no more time, then it should call the `stopGame()` function. The function also needs to return the `timeoutId` if the game continues or the string `"game stopped"` if the game is over. You don't need to worry about the time right now. The time will be addressed in US-05.
@@ -230,6 +272,8 @@ function startGame(){
 }
 ```
 _**Note:** This function is provided to you. You only need to uncomment the code inside the function._
+
+**Commit your code**: If you've made notable progress, now might be a good time to make a commit to secure your progress.
 
 #### Acceptance criteria
 
@@ -294,6 +338,8 @@ function setEventListeners(){
 ```
 **Hint:** Try to implement the solution by yourself and then look at the suggested implementation for this function in this [REPL](https://replit.com/@thinkful/addEventListeners#script.js). If you don't remember event listeners, you can review the _Event listeners_ lesson from the _JavaScript and the DOM_ module.
 
+**Commit your code**: If you've made notable progress, now might be a good time to make a commit to secure your progress.
+
 #### Acceptance criteria
 
 1. The score points increment by 1, and the scoreboard is updated when `updateScore()` is called.
@@ -333,6 +379,8 @@ function updateTimer() {
 ```
 _**Note:** This is the same function that's provided in  [this REPL](https://replit.com/@thinkful/timer#script.js)._
 
+**Commit your code**: If you've made notable progress, now might be a good time to make a commit to secure your progress.
+
 #### Acceptance criteria
 
 1. `startTimer()` and `updateTimer()` work as expected.
@@ -341,16 +389,25 @@ _**Note:** This is the same function that's provided in  [this REPL](https://rep
 
 ## US-06: Originality
 
-Good job making it this far! You have a functional game, and it's time to add some uniqueness and originality to make it your own. Read the following suggestions and implement whatever you want. There are no unit tests for this user story, but originality will be considered in the rubric.
+Good job making it this far! 
+
+You have a functional game, and now it's time to enhance it with your creativity and originality. This step is crucial, not just for the satisfaction of making something unique but also because potential employers and collaborators will be looking at your work. Your ability to innovate and personalize projects is highly valued in the tech industry, as it showcases your problem-solving skills, creativity, and attention to detail. Let's make your game stand out!
+
+Read the following suggestions and implement whatever you want. There are no unit tests for this user story, but originality will be considered in the rubric.
 
 #### 1. Change the look of the game.
+
 The game looks great, but it looks similar to the games of some  other students in the program. Hack the `styles.css` file and make some changes to make your game look unique. You can change the background, the sprites, the fonts, and the general appearance of the game. Why not use zombies or monsters instead of moles? Study  and experiment with `styles.css` and see what you can come up with.
 
 #### 2. Audio FX and music
+
 A game without sound FX and music can be pretty boring. Here is a [REPL](https://replit.com/@thinkful/audiofx-and-music#script.js) with an example of how to add audio to your game. Feel free to use your own audio files.
 
 #### 3. Additional features
+
 You can add additional features to your game. Here are some examples: adding more user controls to control difficulty, adding a sprite that takes off points if it gets hit, or adding additional animations.
+
+**Commit your code**: If you've made notable progress, now might be a good time to make a commit to secure your progress.
 
 #### Acceptance criteria
 
@@ -364,7 +421,6 @@ You made it! You finished the first version of your game. Now, it's time to show
 
 1. The project is deployed to GitHub.
 
-
 # Success criteria
 
 Functionality:
@@ -376,7 +432,6 @@ Functionality:
 General code organization:
 - Minimal code duplication
 - Comments are used to describe the functions.
-
 
 # Tips
 
