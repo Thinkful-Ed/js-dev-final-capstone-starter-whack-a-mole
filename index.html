@@ -6,7 +6,7 @@
     <h1 id="title">Catch-Me-If-You-Can</h1>
     <div>
       <div>
-        <h2>Click start to play!</h2>
+        <h2>Click <button id="start">start</button> to play!</h2>
       </div>
       <div>
         <h2>score: <span id="score">0</span></h2>
@@ -49,3 +49,10 @@
     <script src="./src/index.js"></script>
   </body>
 </html>
+
+
+const holes = document.querySelectorAll('.hole');
+const moles = document.querySelectorAll('.mole');
+const startButton = document.querySelector('#start');
+const score = document.querySelector('.score') ;
+const timerDisplay = document.querySelector('.timerDisplay');
