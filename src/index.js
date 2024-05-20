@@ -21,8 +21,10 @@ let difficulty = "hard";
  *
  */
 function randomInteger(min, max) {
-  // return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
 
 /**
  * Sets the time delay given a difficulty parameter.
@@ -42,7 +44,15 @@ function randomInteger(min, max) {
 function setDelay(difficulty) {
   // TODO: Write your code here.
   
-}
+    if (difficulty === 'easy') {
+      return 1500;
+    } else if (difficulty === 'normal') {
+      return 1000;
+    } else {
+      return Math.floor(Math.random() * 600) + 600;
+    }
+  }
+
 
 /**
  * Chooses a random hole from a list of holes.
@@ -60,7 +70,13 @@ function setDelay(difficulty) {
  */
 function chooseHole(holes) {
   // TODO: Write your code here.
-
+  let index = Math.floor(Math.random() * holes.length);
+  let hole = holes[index];
+  if (hole === chooseHole.lastHole) {
+    return chooseHole(holes);
+  }
+  chooseHole.lastHole = hole;
+  return hole;
 }
 
 /**
