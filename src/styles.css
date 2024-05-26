@@ -58,7 +58,7 @@ h2 {
 .hole:after {
   display: block;
   background: url("../assets/hole.png") bottom center no-repeat;
-  /*background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hole.png?raw=true") bottom center no-repeat;*/
+  background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hole.png?raw=true") bottom center no-repeat;
   background-size:contain;
   content:'';
   width: 100%;
@@ -81,13 +81,13 @@ h2 {
   width: 100%;
   height: 100%;
   /*transition: transform 0.5s;*/
-  transition: all 1s;
+  transition: all 0.5s;
   pointer-events:auto;
 }
 
 .hole.show .mole {
-  top: 0;
- /* transform: scale(1.1);*/
+ top: 0;
+ transform: scale(1.1);
 }
 
 

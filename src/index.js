@@ -1,5 +1,6 @@
-const holes = document.querySelectorAll('.hole');
-const moles = document.querySelectorAll('.mole');
+document.addEventListener("DOMContentLoaded", () => {
+const holes = document.querySelectorAll(".hole");
+const moles = document.querySelectorAll(".mole");
 const startButton = document.querySelector('#start');
 const score = document.querySelector('#score');
 const timerDisplay = document.querySelector('#timer'); 
@@ -23,14 +24,14 @@ function setDelay(difficulty) {
       return 1500;
     } else if (difficulty === 'normal') {
       return 1000;
-    } else 
+    } else if (difficulty === 'hard') {
       return randomInteger(600, 1200);
-    
+    }
   }
 
   function chooseHole(holes) {
   
-      const index = randomInteger(0, 8);
+      const index =  randomInteger(0, holes.length - 1);
       const hole = holes[index];
       if (hole === lastHole) {
         return chooseHole(holes);
@@ -46,8 +47,9 @@ function setDelay(difficulty) {
       let timeoutId = showUp();
       return timeoutId;
     } else {
-     let= gameStopped = stopGame();
-      return gameStopped;
+     let gameStopped = stopGame();
+     clearInterval(timer);
+     return gameStopped;
     }
   }
 
@@ -83,7 +85,7 @@ function setDelay(difficulty) {
   }
 
   function clearScore() {
-    points = 0;
+    points= 0;
     score.textContent = points;
     return points;
   }
@@ -105,13 +107,10 @@ function setDelay(difficulty) {
   
   
   function whack(event) {
-        updateScore()
+    updateScore()
     return points;
   }
-  addEventListener('click', whack);
-
-
-
+  
 
   function setEventListeners(){
     moles.forEach(
@@ -123,26 +122,33 @@ function setDelay(difficulty) {
 
 
   function setDuration(duration) {
-    time = duration;
+  
+   time = duration;
     return time;
   }
 
 
 
   function stopGame(){
-    stopAudio(song);
+    /*stopAudio(song);*/
     clearInterval(timer);
     return "game stopped";
   }
   
   
-  function startGame(){
+  function startGame() {
     setDuration(10);
+    clearScore();
+    startTimer();
     showUp();
     return "game started";
-    }
-    startButton.addEventListener("click", startGame);
+  }
   
+  startButton.addEventListener("click", startGame);
+  setEventListeners();
+});
+
+
      
 
   // Please do not modify the code below.
