@@ -1,7 +1,6 @@
 html {
   background: url('../assets/background.png') no-repeat center center fixed;
-  
-  box-sizing: border-box;
+   box-sizing: border-box;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,22 +11,22 @@ html {
 
 h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
-  color: rgb(5, 14, 92);
-  -webkit-text-stroke: 1px rgb(248, 240, 240);
+  color: rgb(44, 245, 127);
+  -webkit-text-stroke: 0px rgb(248, 240, 240);
 }
 
 h2 {
   text-align: center;
-  font-size: 30px;
-  color: rgb(8, 1, 1);
-  -webkit-text-stroke: 1px rgb(231, 236, 240);
+  font-size: 25px;
+  color: rgb(15, 14, 15);
+  -webkit-text-stroke: 1px rgb(243, 243, 237);
 }
 
 #start {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #score {
@@ -41,10 +40,10 @@ h2 {
 
 .grid {
   width: 600px;
-  height: 250px;
+  height: 300px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: auto;
   cursor:url('../assets/mallet.png'), pointer;
   
 }
@@ -73,7 +72,7 @@ h2 {
 
 .mole {
   background:url('../assets/mole.png') bottom center no-repeat;
-  background-size: 30%;
+  background-size: 40%;
   position: absolute;
   top: 100%;
   width: 100%;
