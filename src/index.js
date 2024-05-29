@@ -101,7 +101,13 @@ function chooseHole(holes) {
 */
 function gameOver() {
   // TODO: Write your code here
-  
+  if (time>0){
+    timeoutId = showUp();
+    return timeoutId;
+  } else {
+    gameStopped = stopGame();
+    return gameStopped;
+  }
 }
 
 /**
@@ -163,8 +169,11 @@ function toggleVisibility(hole){
 */
 function updateScore() {
   // TODO: Write your code here
+  // Increment the points global variable by 1 point
   points++;
+  // Update score.textContent with points.
   score.textContent = points;
+  // Return points;
   return points;
 }
 
@@ -190,7 +199,10 @@ function clearScore() {
 function updateTimer() {
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
-  
+  if (time > 0){
+    time -= 1;
+    timerDisplay.textContent = time;
+  }
   return time;
 }
 
@@ -202,7 +214,7 @@ function updateTimer() {
 */
 function startTimer() {
   // TODO: Write your code here
-  // timer = setInterval(updateTimer, 1000);
+  timer = setInterval(updateTimer, 1000);
   return timer;
 }
 
@@ -227,7 +239,7 @@ function whack(event) {
 */
 function setEventListeners(){
   // TODO: Write your code here
-  moles.forEach( mole => mole.addEventListener("click",whack));
+  moles.forEach( mole => mole.addEventListener('click',whack));
   return moles;
 }
 
@@ -261,8 +273,11 @@ function stopGame(){
 *
 */
 function startGame(){
+  clearScore();
   setDuration(10);
   showUp();
+  startTimer();
+  setEventListeners();
   return "game started";
 }
 
