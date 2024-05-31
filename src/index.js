@@ -240,6 +240,8 @@ function startTimer() {
 function endTimer(){
   time = 0;
   timerDisplay.textContent = time;
+  setEventListeners();
+  stopGame();
 }
 
 /**
@@ -287,8 +289,6 @@ function setDuration(duration) {
 function stopGame(){
   stopAudio(song);  //optional
   clearInterval(timer);
-  endTimer();
-  setEventListeners();
   return "game stopped";
 }
 
@@ -310,7 +310,7 @@ function startGame(){
 }
 
 startButton.addEventListener("click", startGame);
-endButton.addEventListener("click", stopGame);
+endButton.addEventListener("click", endTimer);
 easyButton.addEventListener("click", setDelay(easyButton));
 normalButton.addEventListener("click", setDelay(normalButton));
 hardButton.addEventListener("click", setDelay(hardButton));
