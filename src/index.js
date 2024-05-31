@@ -2,6 +2,10 @@ const holes = document.querySelectorAll('.hole');
 const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 // TODO: Add the missing query selectors:
+const endButton = document.querySelector('#end');
+const easyButton = document.querySelector("#easy");
+const normalButton = document.querySelector("#normal");
+const hardButton = document.querySelector("#hard");
 const score = document.querySelector('#score'); // Use querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 
@@ -10,6 +14,21 @@ let timer;
 let lastHole = 0;
 let points = 0;
 let difficulty = "hard";
+
+const audioHit = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/hit.mp3?raw=true");
+const song = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/molesong.mp3?raw=true");
+
+function playAudio(audioObject){
+  audioObject.play();
+}
+
+function stopAudio(audioObject){
+  audioObject.pause();
+}
+
+function play(){
+  playAudio(song)
+}
 
 /**
  * Generates a random integer within a range.
@@ -218,6 +237,11 @@ function startTimer() {
   return timer;
 }
 
+function endTimer(){
+  time = 0;
+  timerDisplay.textContent = time;
+}
+
 /**
 *
 * This is the event handler that gets called when a player
@@ -261,10 +285,13 @@ function setDuration(duration) {
 *
 */
 function stopGame(){
-  // stopAudio(song);  //optional
+  stopAudio(song);  //optional
   clearInterval(timer);
+  endTimer();
+  setEventListeners();
   return "game stopped";
 }
+
 
 /**
 *
@@ -273,6 +300,7 @@ function stopGame(){
 *
 */
 function startGame(){
+  play();
   clearScore();
   setDuration(10);
   showUp();
@@ -282,7 +310,10 @@ function startGame(){
 }
 
 startButton.addEventListener("click", startGame);
-
+endButton.addEventListener("click", stopGame);
+easyButton.addEventListener("click", setDelay(easyButton));
+normalButton.addEventListener("click", setDelay(normalButton));
+hardButton.addEventListener("click", setDelay(hardButton));
 
 // Please do not modify the code below.
 // Used for testing purposes.
