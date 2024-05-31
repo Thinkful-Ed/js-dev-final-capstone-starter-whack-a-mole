@@ -1,13 +1,23 @@
 <html>
   <head>
     <link rel="stylesheet" href="./src/styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1></h1>
+    <h1 id="title">Whack-a-Mole</h1>
+    <div class="menu">
+      <div class="menuList"><button id="easy">Easy</button></div>
+      <div class="menuList"><button id="normal">Normal</button></div>
+      <div class="menuList"><button id="hard">Hard</button></div>
+    </div>
+    <div class="menu">
+      <div class="menuList"><button id="start">Game Start</button></div>
+      <div class="menuList"><button id="end">Game Stop</button></div>
+    </div>
     <div>
-      <div>
-        <h2>Click start to play!</h2>
-      </div>
       <div>
         <h2>score: <span id="score">0</span></h2>
       </div>
@@ -23,6 +33,27 @@
         <div id="mole1" class="mole"></div>
       </div>
       <!--TODO: Add the missing holes and moles. -->
+      <div id="hole2" class="hole">
+        <div id="mole2" class="mole"></div>
+      </div>
+      <div id="hole3" class="hole">
+        <div id="mole3" class="mole"></div>
+      </div>
+      <div id="hole4" class="hole">
+        <div id="mole4" class="mole"></div>
+      </div>
+      <div id="hole5" class="hole">
+        <div id="mole5" class="mole"></div>
+      </div>
+      <div id="hole6" class="hole">
+        <div id="mole6" class="mole"></div>
+      </div>
+      <div id="hole7" class="hole">
+        <div id="mole7" class="mole"></div>
+      </div>
+      <div id="hole8" class="hole">
+        <div id="mole8" class="mole"></div>
+      </div>
     </div>
     <script src="./src/index.js"></script>
   </body>
