@@ -226,11 +226,18 @@ function playWhackSound() {
 }
 
 function whack(event) {
-  // TODO: Write your code here.
   playWhackSound(); // Play whack sound
-  updateScore();
-  return points;
+  updateScore(); // Increment score
+
+  // Provide visual feedback (screen flash)
+  document.body.classList.add('flash');
+  setTimeout(() => {
+    document.body.classList.remove('flash');
+  }, 500); // Adjust the duration of the flash as needed
+
+  // Other whack logic...
 }
+
 
 /**
 *
