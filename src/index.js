@@ -4,7 +4,8 @@ const startButton = document.querySelector('#start');
 // TODO: Add the missing query selectors:
 const score = document.querySelector('#score'); // Use querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
-
+const whackSound = new Audio('https://github.com/gabrielsanchez/erddiagram/blob/main/hit.mp3?raw=true'); // Replace 'whack_sound.mp3' with the path to your sound file
+const song = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/molesong.mp3?raw=true");
 let time = 0;
 let timer;
 let lastHole = 0;
@@ -100,6 +101,8 @@ function gameOver() {
     return timeoutId;
   } else {
     let gameStopped = stopGame();
+    startButton.textContent = "Game Over";
+    song.pause();
     return gameStopped;
   }
 }
@@ -216,8 +219,15 @@ function startTimer() {
 * the moles.
 *
 */
+
+// Function to play whack sound
+function playWhackSound() {
+  whackSound.play();
+}
+
 function whack(event) {
   // TODO: Write your code here.
+  playWhackSound(); // Play whack sound
   updateScore();
   return points;
 }
@@ -267,7 +277,7 @@ function startGame() {
   // Disable the start button to prevent multiple game instances
   startButton.disabled = true;
   startButton.textContent = "Game In Progress";
-
+  song.play();
   // Clear the score and set event listeners for moles
   clearScore();
   setEventListeners();

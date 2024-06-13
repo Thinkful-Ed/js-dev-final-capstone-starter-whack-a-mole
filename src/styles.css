@@ -80,3 +80,22 @@ h2 {
   top: 0;
   /*transform: scale(1.1);*/
 }
+#options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+#options div {
+  margin-right: 10px;
+}
+
+#options label {
+  font-weight: bold;
+}
+
+#options select {
+  padding: 5px;
+  font-size: 16px;
+}
