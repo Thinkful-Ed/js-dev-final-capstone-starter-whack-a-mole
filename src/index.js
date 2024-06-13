@@ -101,8 +101,10 @@ function gameOver() {
     return timeoutId;
   } else {
     let gameStopped = stopGame();
-    startButton.textContent = "Game Over";
     song.pause();
+    // Change the button back to Start and Enable the start button again
+    startButton.textContent = "Start";
+    startButton.disabled = false;
     return gameStopped;
   }
 }
