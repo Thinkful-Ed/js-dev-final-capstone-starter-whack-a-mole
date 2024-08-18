@@ -96,7 +96,13 @@ function chooseHole(holes) {
 */
 function gameOver() {
   // TODO: Write your code here
-  
+  if(time > 0){
+    let timeoutId = showUp();
+    return timeoutId;
+  } else {
+    let gameStopped = stopGame();
+    return gameStopped;
+  }
 }
 
 /**
@@ -109,8 +115,8 @@ function gameOver() {
 *
 */
 function showUp() {
-  let delay = 0; // TODO: Update so that it uses setDelay()
-  const hole = 0;  // TODO: Update so that it use chooseHole()
+  let delay = setDelay(difficulty);
+  const hole = chooseHole(holes);
   return showAndHide(hole, delay);
 }
 
@@ -122,14 +128,17 @@ function showUp() {
 * the timeoutID
 *
 */
+
 function showAndHide(hole, delay){
-  // TODO: call the toggleVisibility function so that it adds the 'show' class.
-  
+  // Show the mole by toggling the visibility
+  toggleVisibility(hole);
+
+  // Use setTimeout to hide the mole after the delay
   const timeoutID = setTimeout(() => {
-    // TODO: call the toggleVisibility function so that it removes the 'show' class when the timer times out.
-    
+    toggleVisibility(hole); // Hide the mole
     gameOver();
-  }, 0); // TODO: change the setTimeout delay to the one provided as a parameter
+    }, delay); // Set to parameter for the setDelay parameter to use.
+
   return timeoutID;
 }
 
