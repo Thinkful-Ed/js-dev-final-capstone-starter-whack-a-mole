@@ -288,7 +288,7 @@ function startGame(){
   setDelay("hard");
   showUp();
   setEventListeners();
-  // startTimer();
+  startTimer();
   return "game started";
 }
 
