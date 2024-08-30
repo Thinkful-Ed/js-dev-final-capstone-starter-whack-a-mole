@@ -40,9 +40,15 @@ function randomInteger(min, max) {
  *
  */
 function setDelay(difficulty) {
-  // TODO: Write your code here.
-  
-}
+  // TODO: the difficulty parameter can have values easy, normal, or hard with varying time delays: 1500 ms, 1000 ms, or randomInt between 600-1200
+  if (difficulty === 'easy'){
+    return 1500; //1.5 second delay
+  } else if (difficulty === 'normal'){
+    return 1000; // 1 second delay
+  } else if (difficulty === 'hard'){
+    return Math.floor(Math.random()* (1200 - 600 + 1)) + 600;
+  }
+  }
 
 /**
  * Chooses a random hole from a list of holes.
@@ -59,10 +65,15 @@ function setDelay(difficulty) {
  * chooseHole(holes) //> returns one of the 9 holes that you defined
  */
 function chooseHole(holes) {
-  // TODO: Write your code here.
-
+  // My written code starts here
+  const index = randomInteger (0,8);
+  const hole = holes[index];
+  if (hole===lastHole){
+    return chooseHole(holes);
+  }
+  lastHole = hole;
+  return hole;
 }
-
 /**
 *
 * Calls the showUp function if time > 0 and stops the game if time = 0.
