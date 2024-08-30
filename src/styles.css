@@ -51,8 +51,8 @@ h2 {
 
 .hole:after {
   display: block;
-  /*background: url("./assets/hole.png") bottom center no-repeat;*/
-  background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hole.png?raw=true") bottom center no-repeat;
+  background: url("../assets/hole.png") bottom center no-repeat;
+  /* background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hole.png?raw=true") bottom center no-repeat; */
   background-size:contain;
   content:'';
   width: 100%;
@@ -63,9 +63,15 @@ h2 {
   pointer-events:none;
 }
 
+/* ADDED THIS IN BECAUSE I DIDN'T SEE A REFERENCE TO SHOW - does not work lol */
+.show{
+  display:block;
+  background-color: red;
+}
+
 .mole {
-  /*background:url('./assets/mole.png') bottom center no-repeat;*/
-  background:url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat;
+  background:url('../assets/mole.png') bottom center no-repeat;
+  /* background:url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat; */
   background-size: 40%;
   position: absolute;
   top: 100%;
@@ -76,7 +82,7 @@ h2 {
   pointer-events:auto;
 }
 
-.hole.show .mole {
+.hole .show .mole {
   top: 0;
-  /*transform: scale(1.1);*/
+  transform: scale(1.1);
 }
