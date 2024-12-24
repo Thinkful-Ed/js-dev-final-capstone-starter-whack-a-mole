@@ -237,13 +237,27 @@ function stopGame(){
 }
 
 /**
-*
-* This is the function that starts the game when the `startButton`
-* is clicked.
-*
+* This function starts the game when the `startButton` is clicked and initializes the game by performing the following steps: 
+
+ * 1. Clears the score using `clearScore()`. 
+
+ * 2. Sets the game duration using `setDuration()`. 
+
+ * 3. Sets up event listeners on the moles using `setEventListeners()`.
+
+ * 4. Starts the game timer by calling `startTimer()`.  
+
+ * 5. Begins the game loop by calling `showUp()` to display moles. 
+
+
+ * Note: Simply uncommenting `setDuration(10);` and `showUp();` is not enough. To make the game work, ensure all necessary functions listed above are called to initialize the score, timer, event listeners, and mole appearances. 
 */
 function startGame(){
+  //clearScore();
+  //stopGame();   //optional
   //setDuration(10);
+  //setEventListeners();
+  //startTimer();
   //showUp();
   return "game started";
 }
