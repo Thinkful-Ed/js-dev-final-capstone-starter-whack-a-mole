@@ -21,7 +21,7 @@ let difficulty = "hard";
  *
  */
 function randomInteger(min, max) {
-  // return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -39,10 +39,18 @@ function randomInteger(min, max) {
  * setDelay("hard") //> returns 856 (returns a random number between 600 and 1200).
  *
  */
-function setDelay(difficulty) {
-  // TODO: Write your code here.
+function setDelay(difficulty) { // how do I tell if this is a time delay / milisec
+  if (difficulty === "easy") {
+    return 1500;
+  }
+  else if (difficulty === "normal") {
+    return 1000;
+  }
+  else if (difficulty === "hard") {
+    return randomInteger(600, 1200);
+  }
+  //else return "Not a valid difficulty level.";
 }
-
 /**
  * Chooses a random hole from a list of holes.
  *
@@ -59,7 +67,16 @@ function setDelay(difficulty) {
  */
 function chooseHole(holes) {
   // TODO: Write your code here.
-
+  let index = 0;
+  index = randomInteger(0, 8);
+  const hole = holes[index];
+  if (hole === lastHole) {
+    chooseHole(holes);
+  }
+  if (hole != lastHole) {
+    lastHole = hole;
+  }
+  return hole;
 }
 
 /**
