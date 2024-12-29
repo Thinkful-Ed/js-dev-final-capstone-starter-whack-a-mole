@@ -66,7 +66,6 @@ function setDelay(difficulty) { // how do I tell if this is a time delay / milis
  * chooseHole(holes) //> returns one of the 9 holes that you defined
  */
 function chooseHole(holes) {
-  // TODO: Write your code here.
   let index = 0;
   index = randomInteger(0, 8);
   const hole = holes[index];
@@ -114,8 +113,8 @@ function gameOver() {
 *
 */
 function showUp() {
-  let delay = 0; // TODO: Update so that it uses setDelay()
-  const hole = 0;  // TODO: Update so that it use chooseHole()
+  let delay = setDelay(difficulty); // TODO: Update so that it uses setDelay()
+  const hole = chooseHole(holes);  // TODO: Update so that it use chooseHole()
   return showAndHide(hole, delay);
 }
 
@@ -129,12 +128,17 @@ function showUp() {
 */
 function showAndHide(hole, delay){
   // TODO: call the toggleVisibility function so that it adds the 'show' class.
+  toggleVisibility(hole);
   
   const timeoutID = setTimeout(() => {
     // TODO: call the toggleVisibility function so that it removes the 'show' class when the timer times out.
-    
+    toggleVisibility(hole);
+
     gameOver();
-  }, 0); // TODO: change the setTimeout delay to the one provided as a parameter
+  }, delay); // maybe change the 0 to delay instead of the setTimeout.delay = delay;
+  
+  // setTimeout.delay = delay; // TODO: change the setTimeout delay to the one provided as a parameter
+
   return timeoutID;
 }
 
@@ -145,8 +149,10 @@ function showAndHide(hole, delay){
 *
 */
 function toggleVisibility(hole){
-  // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
   
+  hole.classList.toggle("show"); 
+  // do I need to modify the html or css on the DOM?
+
   return hole;
 }
 
@@ -161,7 +167,10 @@ function toggleVisibility(hole){
 *
 */
 function updateScore() {
-  // TODO: Write your code here
+
+  points = points + 1;
+
+  score.textContent = points;
 
   return points;
 }
