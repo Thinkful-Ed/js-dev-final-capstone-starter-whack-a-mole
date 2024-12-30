@@ -160,7 +160,6 @@ function toggleVisibility(hole){
   
   hole.classList.toggle("show"); 
   // do I need to modify the html or css on the DOM?
-
   return hole;
 }
 
@@ -242,8 +241,7 @@ function whack(event) {
 */
 function setEventListeners() {
   // TODO: Write your code here
-  const moles = document.querySelectorAll(".mole");
-  for(mole of moles ) {
+  for(const mole of moles ) {
       mole.addEventListener("click", whack);
   }
   return moles;
