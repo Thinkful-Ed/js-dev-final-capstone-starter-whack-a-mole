@@ -231,9 +231,7 @@ function startTimer() {
 */
 function whack(event) {
   // TODO: Write your code here.
-  const moleClickHandler = (event) => {
-    updateScore();
-  }
+  updateScore();
   return points;
 }
 
@@ -242,13 +240,12 @@ function whack(event) {
 * Adds the 'click' event listeners to the moles. See the instructions
 * for an example on how to set event listeners using a for loop.
 */
-function setEventListeners(){
+function setEventListeners() {
   // TODO: Write your code here
-    const moleHole = document.querySelector("mole");
-  moleHole.addEventListener("click",(whack()) => {
-    updateScore();
-    console.log("You got a mole!", moleClickHandler);
-
+  const moles = document.querySelectorAll(".mole");
+  for(mole of moles ) {
+      mole.addEventListener("click", whack);
+  }
   return moles;
 }
 
