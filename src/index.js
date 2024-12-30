@@ -231,8 +231,9 @@ function startTimer() {
 */
 function whack(event) {
   // TODO: Write your code here.
-  const moleHole = document.querySelector("hole");
-  // call updateScore()
+  const moleClickHandler = (event) => {
+    updateScore();
+  }
   return points;
 }
 
@@ -243,6 +244,10 @@ function whack(event) {
 */
 function setEventListeners(){
   // TODO: Write your code here
+    const moleHole = document.querySelector("mole");
+  moleHole.addEventListener("click",(whack()) => {
+    updateScore();
+    console.log("You got a mole!", moleClickHandler);
 
   return moles;
 }
