@@ -39,7 +39,7 @@ function randomInteger(min, max) {
  * setDelay("hard") //> returns 856 (returns a random number between 600 and 1200).
  *
  */
-function setDelay(difficulty) { // how do I tell if this is a time delay / milisec
+function setDelay(difficulty) { 
   if (difficulty === "easy") {
     return 1500;
   }
@@ -49,7 +49,7 @@ function setDelay(difficulty) { // how do I tell if this is a time delay / milis
   else if (difficulty === "hard") {
     return randomInteger(600, 1200);
   }
-  //else return "Not a valid difficulty level.";
+  //else return "Not a valid difficulty level."; // how do I change the difficulty level of the game???
 }
 /**
  * Chooses a random hole from a list of holes.
@@ -90,12 +90,6 @@ function chooseHole(holes) {
 * return the timeoutId if the game continues or the string "game stopped"
 * if the game is over.
 *
-*  // if time > 0:
-*  //   timeoutId = showUp()
-*  //   return timeoutId
-*  // else
-*  //   gameStopped = stopGame()
-*  //   return gameStopped
 *
 */
 function gameOver() {
@@ -121,7 +115,7 @@ function gameOver() {
 *
 */
 function showUp() {
-  let delay = setDelay(difficulty); // TODO: Update so that it uses setDelay()
+  let delay = setDelay(difficulty); // TODO: Update so that it uses setDelay() // how do I choose a difficulty?
   const hole = chooseHole(holes);  // TODO: Update so that it use chooseHole()
   return showAndHide(hole, delay);
 }
