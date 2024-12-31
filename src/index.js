@@ -144,7 +144,7 @@ function showAndHide(hole, delay){
 */
 function toggleVisibility(hole){
   
-  hole.classList.toggle(".show"); 
+  hole.classList.toggle("show"); 
   // do I need to modify the html or css on the DOM?
   return hole;
 }
